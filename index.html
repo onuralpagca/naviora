@@ -1,40 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - My App Name</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #333;
-    }
-    h1, h2 { color: #111; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Naviora Surf</title>
+<style>
+  :root {
+    --ink:#0C1A24; --body:#46606F; --rule:#C2D0D8;
+    --sea:#12557E; --gold:#96690A; --card:#fff; --paper:#EDF1F4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#DEE9EF; --body:#8AA5B4; --rule:#23394A;
+            --sea:#6BB6E4; --gold:#D7A741; --card:#12212B; --paper:#0B151C; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:0 20px 80px; background:var(--paper); color:var(--ink);
+    font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:680px; margin:0 auto; }
+  header { padding:64px 0 26px; border-bottom:2px solid var(--ink); }
+  h1 { font-size:clamp(1.9rem,5.5vw,2.5rem); line-height:1.15; margin:0 0 10px; letter-spacing:-.02em; }
+  .meta { color:var(--body); margin:0; font-size:.95rem; }
+  h2 { font-size:1.2rem; margin:42px 0 10px; letter-spacing:-.01em; }
+  p, li { color:var(--body); }
+  li { margin-bottom:7px; }
+  strong { color:var(--ink); }
+  a { color:var(--sea); }
+  .card {
+    background:var(--card); border:1px solid var(--rule);
+    border-left:3px solid var(--gold); border-radius:0 6px 6px 0;
+    padding:18px 22px; margin:24px 0;
+  }
+  .card p { margin:0; }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.95rem; }
+  th, td { text-align:left; padding:9px 14px 9px 0; border-bottom:1px solid var(--rule); }
+  th { color:var(--ink); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; }
+  td { color:var(--body); }
+  footer { margin-top:54px; padding-top:20px; border-top:1px solid var(--rule);
+           color:var(--body); font-size:.9rem; }
+  code { background:var(--paper); padding:.1em .4em; border-radius:3px; font-size:.9em; }
+</style>
 </head>
 <body>
-  <h1>Privacy Policy for [Your App Name]</h1>
-  <p><strong>Last updated:</strong> August 2026</p>
-  
-  <h2>1. Overview</h2>
-  <p>[Your App Name] ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+<div class="wrap">
 
-  <h2>2. Information We Collect</h2>
-  <p>We collect [list data here, e.g., no personal data / account email addresses / crash diagnostics].</p>
+<header>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Naviora Surf · Effective 2 August 2026</p>
+</header>
 
-  <h2>3. Third-Party Services</h2>
-  <p>Our app uses third-party services that may collect information used to identify you, including:
-    <ul>
-      <li><a href="https://policies.google.com/privacy">Google Analytics for Firebase</a></li>
-      <li><a href="https://support.google.com/admob/answer/6128543">AdMob</a></li>
-    </ul>
+<div class="card">
+  <p>
+    <strong>Naviora Surf collects no data. None at all.</strong> There is no
+    analytics, no advertising, no tracking, no account, and the app makes no
+    network connections of any kind.
   </p>
+</div>
 
-  <h2>4. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy, contact us at: [your-email@example.com]</p>
+<h2>Who this covers</h2>
+<p>
+  This policy applies to the iOS app <strong>Naviora Surf</strong>, published by
+  Hasan Onuralp Agca. In this document, "the app" means that app and "we" means
+  the developer.
+</p>
+
+<h2>Information we collect</h2>
+<p><strong>We collect nothing.</strong> To be specific:</p>
+<ul>
+  <li>We do not collect your name, email address, phone number or any other contact detail.</li>
+  <li>We do not collect device identifiers, advertising identifiers or your IP address.</li>
+  <li>We do not collect location data.</li>
+  <li>We do not collect usage or analytics data, and there is no crash-reporting service.</li>
+  <li>We do not use cookies, pixels, fingerprinting or any other tracking technology.</li>
+  <li>There is no account, login or sign-up, so nothing about you is ever identified.</li>
+</ul>
+
+<h2>Third parties</h2>
+<p>
+  The app contains <strong>no third-party SDKs</strong> — no advertising network,
+  no analytics provider, no attribution or measurement partner, no social login.
+  Nothing in the app sends information anywhere, so there is nothing to share
+  and no one to share it with.
+</p>
+
+<h2>What is stored on your device</h2>
+<p>
+  Your game progress is saved locally using Apple's standard
+  <code>UserDefaults</code> storage. It stays on your device, is never
+  transmitted, and is not readable by us or anyone else.
+</p>
+
+<table>
+  <thead><tr><th>Stored locally</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>Levels completed and stars earned</td><td>Continue where you left off</td></tr>
+    <tr><td>Shell balance</td><td>Buy boats and oceans in the shop</td></tr>
+    <tr><td>Equipped boat and ocean</td><td>Remember your choices</td></tr>
+    <tr><td>Best Endless score and distance</td><td>Show your personal best</td></tr>
+    <tr><td>Sound, effects and haptics switches</td><td>Remember your settings</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Deleting the app removes all of it permanently. Because none of it leaves the
+  device, it does not transfer to a new phone.
+</p>
+
+<h2>Network access</h2>
+<p>
+  The app does not connect to the internet. It works fully offline, including in
+  airplane mode. It requests no network permission and opens no connections.
+</p>
+
+<h2>Children's privacy</h2>
+<p>
+  The app is suitable for all ages and collects no information from anyone,
+  including children under 13. There is no advertising, no chat, no
+  user-generated content, no external links and no way to contact other players.
+  Because nothing is collected, there is nothing that could be collected from a
+  child.
+</p>
+
+<h2>Purchases</h2>
+<p>
+  The app is free and contains <strong>no in-app purchases</strong>. Boats and
+  oceans are earned by playing. We never see or handle payment information of
+  any kind.
+</p>
+
+<h2>Your rights</h2>
+<p>
+  Rights such as access, correction, deletion and portability under the GDPR,
+  the CCPA and similar laws all concern data a company holds about you. We hold
+  no data about you, so there is nothing to request, export or erase. If you
+  want your local game progress removed, delete the app.
+</p>
+
+<h2>Data provided to us by Apple</h2>
+<p>
+  Apple may give us anonymous, aggregated App Store statistics such as download
+  and territory counts. That is collected and controlled by Apple under
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, not
+  by this app, and it never identifies an individual person.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+  If a future version of the app ever collects anything, this page will be
+  updated <em>before</em> that version is released, the change will be described
+  here, and the effective date at the top will change.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions about this policy: <a href="mailto:onuralpagca@hotmail.com">onuralpagca@hotmail.com</a>
+</p>
+
+<footer>
+  Naviora Surf · © 2026 Hasan Onuralp Agca ·
+  <a href="./">Support</a>
+</footer>
+
+</div>
 </body>
 </html>
