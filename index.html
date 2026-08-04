@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naviora Surf — Official Game Page</title>
+    <title>Naviora Surf! 🌊⛵</title>
+    <!-- Importing a fun, bubbly, rounded font for kids -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --accent-blue: #38bdf8;
-            --accent-yellow: #facc15;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border: #334155;
+            --sky-blue: #38bdf8;
+            --ocean-blue: #0284c7;
+            --sunny-yellow: #facc15;
+            --yellow-shadow: #ca8a04;
+            --coral-pink: #f43f5e;
+            --coral-shadow: #be123c;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
         }
 
         * {
@@ -22,261 +27,308 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: var(--text-main);
+            font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+            background: linear-gradient(180deg, #7dd3fc 0%, #0284c7 100%);
+            color: var(--text-dark);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow-x: hidden;
         }
 
-        /* Navigation Bar */
-        nav {
+        /* Fun Top Bar */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 8%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 24px 24px;
+            margin: 0 1rem;
+            box-shadow: 0 8px 20px rgba(0, 114, 188, 0.2);
         }
 
-        .brand {
+        .logo-area {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 12px;
             text-decoration: none;
-            color: var(--text-main);
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
         }
 
-        .brand img {
-            width: 42px;
-            height: 42px;
+        .logo-area img {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent-blue);
+            border: 3px solid var(--ocean-blue);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
         }
 
-        .nav-links {
+        .logo-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--ocean-blue);
+            text-shadow: 1px 1px 0px #fff;
+        }
+
+        .parent-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
-        .nav-links a {
-            color: var(--text-muted);
+        .parent-links a {
+            color: var(--text-dark);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
+            font-size: 0.95rem;
+            font-weight: 700;
+            background-color: #f1f5f9;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 2px solid #cbd5e1;
+            transition: all 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-blue);
+        .parent-links a:hover {
+            background-color: var(--sunny-yellow);
+            border-color: var(--yellow-shadow);
+            transform: translateY(-2px);
         }
 
-        /* Hero Section */
-        .hero {
+        /* Main Game Playground Area */
+        main {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 4rem 8%;
-            max-width: 1200px;
+            justify-content: center;
+            gap: 4rem;
+            padding: 3rem 5%;
+            max-width: 1100px;
             margin: 0 auto;
             flex-wrap: wrap;
-            gap: 3rem;
         }
 
-        .hero-text {
+        .game-info {
             flex: 1;
             min-width: 300px;
+            text-align: left;
         }
 
-        .tagline-badge {
+        .badge {
             display: inline-block;
-            background-color: rgba(56, 189, 248, 0.15);
-            color: var(--accent-blue);
-            padding: 0.4rem 1rem;
+            background-color: var(--sunny-yellow);
+            color: #713f12;
+            font-weight: 700;
+            padding: 0.5rem 1.2rem;
             border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1rem;
+            box-shadow: 0 4px 0 var(--yellow-shadow);
+            margin-bottom: 1.5rem;
         }
 
         h1 {
             font-size: 3.5rem;
-            font-weight: 800;
+            color: #ffffff;
             line-height: 1.1;
             margin-bottom: 1rem;
-            background: linear-gradient(to right, #ffffff, #93c5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 0 #0369a1, 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .description {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            line-height: 1.6;
+        p.fun-text {
+            font-size: 1.3rem;
+            color: #f8fafc;
             margin-bottom: 2rem;
-            max-width: 480px;
+            line-height: 1.5;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .cta-buttons {
+        /* 3D Toy Arcade Buttons */
+        .arcade-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
 
-        .btn {
+        .btn-toy {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 0.9rem 1.8rem;
-            border-radius: 10px;
+            gap: 8px;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.2s ease;
+            border-radius: 24px;
+            transition: transform 0.1s, box-shadow 0.1s;
+            cursor: pointer;
         }
 
-        .btn-primary {
-            background-color: var(--accent-yellow);
-            color: #0f172a;
-            box-shadow: 0 4px 14px rgba(250, 204, 21, 0.3);
+        .btn-play {
+            background-color: var(--sunny-yellow);
+            color: #422006;
+            box-shadow: 0 8px 0 var(--yellow-shadow), 0 15px 20px rgba(0,0,0,0.2);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background-color: #fde047;
+        .btn-play:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 var(--yellow-shadow);
         }
 
-        .btn-secondary {
-            background-color: var(--bg-card);
-            color: var(--text-main);
-            border: 1px solid var(--border);
+        .btn-help {
+            background-color: var(--card-bg);
+            color: var(--ocean-blue);
+            box-shadow: 0 8px 0 #cbd5e1, 0 15px 20px rgba(0,0,0,0.15);
         }
 
-        .btn-secondary:hover {
-            border-color: var(--accent-blue);
-            color: var(--accent-blue);
+        .btn-help:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 #cbd5e1;
         }
 
-        /* Screenshot Frame */
-        .hero-image {
+        /* Tilted Playful Game Screenshot */
+        .screenshot-container {
             flex: 0 1 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            transform: rotate(3deg);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-container:hover {
+            transform: rotate(0deg) scale(1.03);
         }
 
         .phone-frame {
-            position: relative;
-            width: 280px;
-            border-radius: 36px;
-            padding: 10px;
-            background: #1e293b;
-            border: 4px solid #334155;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 290px;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 40px;
+            box-shadow: 0 20px 0 #0369a1, 0 30px 40px rgba(0, 0, 0, 0.3);
+            border: 4px solid #e2e8f0;
         }
 
         .phone-frame img {
             width: 100%;
             height: auto;
-            border-radius: 26px;
+            border-radius: 28px;
             display: block;
         }
 
-        /* Footer */
+        /* Floating Decorative Emojis around the image */
+        .sticker {
+            position: absolute;
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+            pointer-events: none;
+        }
+
+        .sticker-1 { top: -20px; left: -25px; transform: rotate(-15deg); }
+        .sticker-2 { bottom: 30px; right: -25px; transform: rotate(15deg); }
+
+        /* Footer for Parents & Legal */
         footer {
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-muted);
+            background-color: #0c4a6e;
+            color: #e0f2fe;
             font-size: 0.9rem;
-            background-color: rgba(15, 23, 42, 0.9);
+            border-top: 4px solid #075985;
+            margin-top: 3rem;
         }
 
         footer a {
-            color: var(--text-muted);
+            color: #38bdf8;
             text-decoration: none;
-            margin: 0 0.8rem;
+            font-weight: 700;
+            margin: 0 10px;
         }
 
         footer a:hover {
-            color: var(--text-main);
             text-decoration: underline;
         }
 
-        /* Mobile Responsive Adjustments */
+        /* Mobile Friendly */
         @media (max-width: 768px) {
-            .hero {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            main {
                 flex-direction: column;
                 text-align: center;
-                padding: 3rem 5%;
+                gap: 3rem;
             }
 
-            .description {
-                margin-left: auto;
-                margin-right: auto;
+            .game-info {
+                text-align: center;
             }
 
-            .cta-buttons {
+            .arcade-buttons {
                 justify-content: center;
             }
 
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
+            }
+
+            .screenshot-container {
+                transform: rotate(0deg);
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <nav>
-        <a href="index.html" class="brand">
+    <!-- Bubbly Header -->
+    <header>
+        <a href="index.html" class="logo-area">
             <img src="logo.png" alt="Company Logo">
-            <span>Naviora Surf</span>
+            <span class="logo-title">Naviora Surf!</span>
         </a>
-        <div class="nav-links">
-            <a href="support.html">Support</a>
-            <a href="privacy.html">Privacy</a>
+        
+        <!-- Easy-to-see links for parents & Apple review -->
+        <div class="parent-links">
+            <a href="support.html">🛠️ Support</a>
+            <a href="privacy.html">🔒 Privacy Policy</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Welcome Content -->
-    <main class="hero">
-        <div class="hero-text">
-            <div class="tagline-badge">The Wave is Coming • Outrun It</div>
-            <h1>NAVIORA SURF</h1>
-            <p class="description">
-                Navigate the surging ocean waves, master endless levels, and collect shells along the way. Available soon on the App Store!
+    <!-- Main Fun Area -->
+    <main>
+        <div class="game-info">
+            <div class="badge">🐚 11,855 Shells Collected!</div>
+            <h1>OUTRUN THE GIANT WAVE! 🌊</h1>
+            <p class="fun-text">
+                Hop into your boat, surf across endless blue ocean levels, and escape the giant wave! Are you fast enough to conquer Level 26?
             </p>
-            <div class="cta-buttons">
-                <a href="support.html" class="btn btn-primary">Contact Support</a>
-                <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+            <div class="arcade-buttons">
+                <!-- Fun primary action button -->
+                <a href="support.html" class="btn-toy btn-play">
+                    ⛵ Play Soon!
+                </a>
+                <!-- Help button that leads to your mail/support form -->
+                <a href="support.html" class="btn-toy btn-help">
+                    ❓ Need Help?
+                </a>
             </div>
         </div>
 
-        <!-- Phone Styled Screenshot Frame -->
-        <div class="hero-image">
+        <!-- Fun Game Display -->
+        <div class="screenshot-container">
+            <div class="sticker sticker-1">🐢</div>
+            <div class="sticker sticker-2">🐚</div>
             <div class="phone-frame">
-                <img src="screenshot.jpg" alt="Naviora Surf Gameplay Screenshot">
+                <img src="screenshot.jpg" alt="Naviora Surf Gameplay">
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Clear Footer for App Store Review / Parents -->
     <footer>
-        <div style="margin-bottom: 0.8rem;">
-            <a href="support.html">Support</a> • 
+        <p>
+            <strong>Parents & Guardians:</strong> 
+            <a href="support.html">Contact & Support</a> | 
             <a href="privacy.html">Privacy Policy</a>
-        </div>
-        <p>&copy; 2026 Naviora Surf. All rights reserved.</p>
+        </p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">&copy; 2026 Naviora Surf. Safe, fun, and free to play!</p>
     </footer>
 
 </body>
