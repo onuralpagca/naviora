@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naviora Surf — Support 🛠️</title>
+    <!-- Fun bubbly font matching your main page -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
@@ -67,6 +68,18 @@
         header {
             text-align: center;
             margin-bottom: 2rem;
+        }
+
+        .studio-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
         }
 
         h1 {
@@ -192,6 +205,14 @@
             color: var(--text-muted);
             line-height: 1.5;
         }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #e0f2fe;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -202,13 +223,17 @@
         </div>
 
         <header>
+            <div class="studio-badge">🎮 HASO STUDIOS</div>
             <h1>Need Help? 🛠️</h1>
             <p>Found a bug or have a question? Send us a message below!</p>
         </header>
 
+        <!-- Main Support Form Card -->
         <div class="card">
-            <form action="https://formsubmit.co/onuralpagca@hotmail.com" method="POST">
+            <!-- UPDATED: FormSubmit now sends directly to hasostudios@gmail.com -->
+            <form action="https://formsubmit.co/hasostudios@gmail.com" method="POST">
                 
+                <!-- Optional: Avoid spam and return user to this page after sending -->
                 <input type="hidden" name="_subject" value="New Support Message - Naviora Surf!">
                 <input type="hidden" name="_captcha" value="false">
 
@@ -236,11 +261,13 @@
             </form>
         </div>
 
+        <!-- UPDATED: Direct Email Fallback to hasostudios@gmail.com -->
         <div class="direct-email">
             Prefer your own email app? Contact us at: 
-            <a href="mailto:onuralpagca@hotmail.com?subject=Naviora%20Surf%20Support">onuralpagca@hotmail.com</a>
+            <a href="mailto:hasostudios@gmail.com?subject=Naviora%20Surf%20Support">hasostudios@gmail.com</a>
         </div>
 
+        <!-- Apple Loves Simple FAQs on Support Pages -->
         <div class="faq-section">
             <h2>Frequently Asked Questions ❓</h2>
             
@@ -259,6 +286,10 @@
                 <p>Yes! Naviora Surf is completely free to download and enjoy.</p>
             </div>
         </div>
+
+        <footer>
+            &copy; 2026 Haso Studios. All rights reserved.
+        </footer>
     </div>
 
 </body>
