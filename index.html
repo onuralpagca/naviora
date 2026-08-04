@@ -57,14 +57,33 @@
             text-decoration: none;
         }
 
-        /* UPDATED: Minimal styling for the perfected logo */
-        .logo-area img {
-            height: 50px; /* Set height so it doesn't get too big */
-            width: auto;   /* Let the width scale naturally for aspect ratio */
-            border: none;   /* Remove the previous border as the new art is clean */
-            border-radius: 0; /* Remove previous circular clipping */
-            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)); /* Use drop-shadow for transparent PNGs instead of box-shadow */
+        /* NEW LOGO FIX AREA START */
+        /* This is the new container that fixes the logo fit */
+        .logo-container {
+            width: 50px; /* Fixed square size for the container */
+            height: 50px;
+            border-radius: 50%; /* Perfect circle */
+            overflow: hidden; /* Important: clips anything outside the circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Add back the stylized border and shadow to make the fit "perfect" within the kid style */
+            border: 3px solid var(--ocean-blue);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
         }
+
+        /* Style the image to perfectly cover and center within the container */
+        .logo-container img {
+            width: 100%; /* Force image to fill the container size */
+            height: 100%;
+            object-fit: cover; /* Crucial: scales the *art* to fill the container and cuts extra file padding */
+            object-position: center; /* Center the art in the container */
+            border: none;
+            border-radius: 0; /* Clear previous image clipping */
+            filter: none; /* Shadow is on the container now */
+        }
+        /* NEW LOGO FIX AREA END */
 
         .logo-title {
             font-size: 1.6rem;
@@ -281,8 +300,10 @@
     <!-- Bubbly Header -->
     <header>
         <a href="index.html" class="logo-area">
-            <!-- UPDATED: Point to your new perfected logo file -->
-            <img src="logo.png" alt="Naviora Surf Company Logo">
+            <!-- NEW: Your perfect logo fit is now guaranteed by this structure -->
+            <div class="logo-container">
+                <img src="logo.png" alt="Company Logo">
+            </div>
             <span class="logo-title">Naviora Surf!</span>
         </a>
         
