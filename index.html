@@ -57,12 +57,13 @@
             text-decoration: none;
         }
 
+        /* UPDATED: Minimal styling for the perfected logo */
         .logo-area img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 3px solid var(--ocean-blue);
-            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+            height: 50px; /* Set height so it doesn't get too big */
+            width: auto;   /* Let the width scale naturally for aspect ratio */
+            border: none;   /* Remove the previous border as the new art is clean */
+            border-radius: 0; /* Remove previous circular clipping */
+            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)); /* Use drop-shadow for transparent PNGs instead of box-shadow */
         }
 
         .logo-title {
@@ -280,7 +281,8 @@
     <!-- Bubbly Header -->
     <header>
         <a href="index.html" class="logo-area">
-            <img src="logo.png" alt="Company Logo">
+            <!-- UPDATED: Point to your new perfected logo file -->
+            <img src="logo_perfect.png" alt="Naviora Surf Company Logo">
             <span class="logo-title">Naviora Surf!</span>
         </a>
         
